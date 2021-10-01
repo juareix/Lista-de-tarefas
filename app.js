@@ -72,34 +72,25 @@ function carregaListaTarefas(){
     tarefas = bd.recuperarTodosRegistros()
 
     //percorrer array tarefas
-    for(i = 0; i <= tarefas.length; i++){
-        //cria um elemento li
-        let li = document.createElement('li')
+    tarefas.forEach(function(d){
 
-        //cria um button
-        let btn = document.createElement('button')
-        btn.innerHTML = '<i class="fa fa-times"  ></i>'
-        btn.id = `tarefa${i}`
-        btn.onclick = function(){
-            let id = this.id.replace('tarefa','')
-            bd.remover(id)
-            window.location.reload()
-            //console.log(id)
-        }
-        
+		//Criando a linha (tr)
+		var linha = lista_coisa.insertRow();
 
-        //atribui um id para a tarefa
-        li.setAttribute('id', 'tarefa'+i)
-
-        //mostra a tarefa dentro da li
-        li.innerHTML = tarefas[i].tarefa
-
-        //atribui a li á ul
-        document.getElementById('lista-coisa').appendChild(li)
-
-        //atribui um button a li
-        document.getElementById('tarefa'+i).appendChild(btn)
-        
-    }
+		//Criando as colunas (td)
+		linha.insertCell(0).innerHTML = d.tarefa
+		//Criar o botão de exclusão
+		let btn = document.createElement('button')
+		btn.innerHTML = '<i class="far fa-trash-alt"></i>'
+		btn.id = `tarefa_${d.id}`
+		btn.onclick = function(){
+			let id = this.id.replace('tarefa_','')
+			//alert(id)
+			bd.remover(id)
+			window.location.reload()
+		}
+		linha.insertCell(1).append(btn)
+		console.log(d.id)
+	})
     
 }

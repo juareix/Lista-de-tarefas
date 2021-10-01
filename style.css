@@ -22,25 +22,33 @@ body{
     margin-bottom: 20px; 
 }
 
+thead{
+    margin: 20px;
+    padding: 10px;
+    background-color: #181d1e;
+    color: #c13b00;
+}
+thead th{
+    padding: 7px;
+    border: 1px solid #c13b00;
+}
+
+tbody td{
+    margin-top: 20px;
+    padding: 5px;
+    color: #c13b00;
+    background: #181d1e;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+tbody td:hover{
+    color: #181d1e;
+    background: #c13b00;
+}
 .lista-div{
     border: 2px double #181d1e;
     border-radius: 20px;
     margin: 0 auto;
-    padding: 15px;
-}
-ul li{
-    display: block;
-    margin: 5px;
-    background: #181d1e;
-    padding: 10px;
-    font-size: 20px;
-    color: #c13b00;
-}
-
-ul li:hover{
-    background: #c13b00;
-    color: #181d1e;
-    margin: 0;
     padding: 15px;
 }
 
@@ -61,4 +69,8 @@ button{
 .entrada{
     text-align: center;
     margin-top: 20px;
+}
+.btx{
+    text-align: center;
+    border-radius: 20px;
 }
