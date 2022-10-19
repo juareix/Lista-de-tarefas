@@ -1,6 +1,6 @@
 # Lista-de-tarefas
 
-* Esta apicação simula uma lista de tarefas que podem excluidas conforme realizadas
+* Esta aplicação simula uma lista de tarefas que podem ser excluídas conforme vão sendo realizadas pelo usuário
 * Os dados foram guardados no localStorage do navegador
 
 ## imagem do layout:
